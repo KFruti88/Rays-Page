@@ -4,28 +4,292 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>RAYMYSTRO | Operations Command</title>
-    <link rel="stylesheet" href="style.css?v=1.01">
+    <style>
+        :root {
+            --primary-accent: #ffd700; /* FARM Gold Accent */
+            --bg-dark: #0a0a05;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e0e0;
+            --success: #2ecc71;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            opacity: 0; /* Handled by fade-in script */
+        }
+
+        .ray-container {
+            width: 90%;
+            max-width: 1400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Glassmorphism Panel Standard */
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-accent);
+        }
+
+        header h1 {
+            margin: 0;
+            letter-spacing: 2px;
+            color: var(--primary-accent);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 0.8rem;
+            color: var(--primary-accent);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Layout for Commands & Chat */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content { grid-template-columns: 1fr; }
+        }
+
+        /* Table Styling */
+        .command-table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            padding: 12px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 0.9rem;
+        }
+
+        /* Click to Copy Trigger */
+        .cmd-trigger {
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--primary-accent);
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        .cmd-trigger:hover {
+            background: var(--primary-accent);
+            color: #000;
+            box-shadow: 0 0 15px var(--primary-accent);
+        }
+
+        /* Status Badge */
+        .status-badge {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            background: var(--success);
+            color: white;
+        }
+
+        /* Twitch Chat Sidebar */
+        .chat-sidebar {
+            height: 600px;
+            background: #000;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+        }
+
+        /* Notification Toast */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-accent);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: none;
+            font-weight: bold;
+            z-index: 9999;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+    </style>
 </head>
 <body>
+
     <div class="ray-container">
         <header class="glass-panel">
             <h1>🚜 RAYMYSTRO OPERATIONS 🌻</h1>
-            <p>Primary Hub</p>
+            <p style="margin: 5px 0 0; opacity: 0.6; font-size: 0.8rem;">PRIMARY COMMAND HUB v1.01</p>
         </header>
 
-        <main class="stats-grid">
+        <section class="stats-grid">
             <div class="glass-panel card">
                 <h3>ACTIVE ASSIGNMENT</h3>
-                <div id="currentFarm">Syncing with Werewolf Red...</div>
+                <div id="currentFarm" style="font-weight: bold; font-size: 1.1rem;">Syncing with Werewolf Red...</div>
             </div>
             
             <div class="glass-panel card">
                 <h3>FARM 2 ACCOUNTING</h3>
-                <div id="rayBalance">$0.00</div>
+                <div id="rayBalance" style="font-weight: bold; font-size: 1.2rem; color: var(--success);">$0.00</div>
             </div>
-        </main>
+        </section>
+
+        <div class="main-content">
+            <div class="glass-panel command-table-wrap">
+                <h2 style="color: var(--primary-accent); margin-top: 0;">Stream Commands</h2>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 20px;">Tap a command to copy to clipboard.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Command</th>
+                            <th>Response</th>
+                            <th>Cooldown</th>
+                            <th>Access</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!legend')">!legend</span></td>
+                            <td>I’ve got $(count legendary) Legends</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!gold')">!gold</span></td>
+                            <td>$(count gold)</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!silver')">!silver</span></td>
+                            <td>$(count silver)</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!bronze')">!bronze</span></td>
+                            <td>$(count bronze)</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!diamond')">!diamond</span></td>
+                            <td>$(count diamond)</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!myth')">!myth</span></td>
+                            <td>$(count myth) mythical creatures</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-badge">Online</span></td>
+                            <td><span class="cmd-trigger" onclick="copyCmd('!great')">!great</span></td>
+                            <td>$(count greatone)</td>
+                            <td>5s / 15s</td>
+                            <td>Everyone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="chat-sidebar">
+                <iframe 
+                    src="https://www.twitch.tv/embed/raymystyro/chat?parent=kfruti88.github.io&darkpopout"
+                    height="100%"
+                    width="100%">
+                </iframe>
+            </div>
+        </div>
     </div>
-    <script src="ray-logic.js?v=1.01"></script>
+
+    <div id="toast" class="notification">COMMAND COPIED TO CLIPBOARD</div>
+
+    <script>
+        // Copy to Clipboard Logic
+        function copyCmd(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.style.display = 'block';
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                console.error('Copy failed', err);
+            });
+        }
+
+        // Smooth Page Fade-in
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 1s ease-in';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Placeholder for Logic Sync (ray-logic.js functionality)
+        // You can add your live data fetching here
+    </script>
 </body>
 </html>
