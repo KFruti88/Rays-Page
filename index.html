@@ -40,6 +40,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            align-items: center; /* Ensures centered alignment for children */
         }
 
         .glass-panel {
@@ -50,6 +51,8 @@
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            width: 100%; /* Default to full width */
+            box-sizing: border-box;
         }
 
         header {
@@ -69,6 +72,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            width: 100%;
         }
 
         .card h3 {
@@ -96,6 +100,7 @@
             display: grid;
             grid-template-columns: 1fr 350px;
             gap: 20px;
+            width: 100%;
         }
 
         @media (max-width: 1024px) {
@@ -171,23 +176,23 @@
             text-align: center;
         }
 
-        /* --- CENTERED & READABLE CHART STYLE --- */
-        .chart-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            overflow: hidden;
+        /* --- TIGHT-FIT CHART STYLES --- */
+        .chart-section {
+            display: inline-block; /* Makes box shrink to content width */
+            width: auto; 
+            max-width: 100%;
+            padding: 15px;
+            text-align: center;
         }
 
         .chart-frame {
-            width: 100%;
-            max-width: 800px; /* Limits size for better readability */
-            height: 500px;
+            width: 600px; /* Adjust this to match your actual Google Chart width */
+            max-width: 100%; /* Keeps it mobile friendly */
+            height: 371px; /* Adjust to match your Google Chart height */
             border: none;
-            border-radius: 10px;
-            margin-top: 15px;
-            background: transparent; /* Makes the frame itself transparent */
+            background: transparent;
+            display: block;
+            margin: 10px auto 0;
         }
 
         .notification {
@@ -210,7 +215,7 @@
     <div class="ray-container">
         <header class="glass-panel">
             <h1>🚜 RAYMYSTRO OPERATIONS 🌻</h1>
-            <p style="margin: 5px 0 0; opacity: 0.6; font-size: 0.8rem;">PRIMARY COMMAND HUB v1.04 | TRANSPARENT ANALYTICS</p>
+            <p style="margin: 5px 0 0; opacity: 0.6; font-size: 0.8rem;">PRIMARY COMMAND HUB v1.05 | TIGHT-FIT ANALYTICS</p>
         </header>
 
         <section class="stats-grid">
@@ -268,14 +273,12 @@
             </div>
         </div>
 
-        <section class="glass-panel" style="text-align: center;">
-            <h2 style="color: var(--blue); margin-top: 0; letter-spacing: 2px;">📊 MONTHLY EXPENDITURE ANALYTICS</h2>
-            <div class="chart-wrapper">
-                <iframe id="live-chart-frame" class="chart-frame" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrB-ETsmpGrefh9bQ-g2qy3BC6OyAKGFXHLwerPD_t4iBulrGz5gzaPCzEswBbKoCLuk24YRcDz5T_/pubchart?oid=829786370&format=interactive"></iframe>
-            </div>
+        <section class="glass-panel chart-section">
+            <h2 style="color: var(--blue); margin: 0; letter-spacing: 2px; font-size: 1rem;">📊 MONTHLY EXPENDITURE</h2>
+            <iframe id="live-chart-frame" class="chart-frame" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrB-ETsmpGrefh9bQ-g2qy3BC6OyAKGFXHLwerPD_t4iBulrGz5gzaPCzEswBbKoCLuk24YRcDz5T_/pubchart?oid=829786370&format=interactive"></iframe>
         </section>
 
-        <div class="glass-panel alert-panel">
+        <div class="glass-panel alert-panel" style="width:100%;">
             <h3 style="color: var(--blue); margin: 0;">⚠️ MOBILE GAMES EXPENDITURE</h3>
             <div id="val-games" class="val-large" style="color: #fff; text-shadow: 0 0 20px var(--blue);">---</div>
             <p style="color: var(--blue); font-weight: bold; margin-top: 10px;">RESOURCES COULD BE REDIRECTED TO FUEL OR FOOD</p>
