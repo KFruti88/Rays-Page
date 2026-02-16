@@ -30,6 +30,7 @@ Here are the key projects and repositories I have worked on:
 ### 🎮 Game Stats & Counters
 
 #### 🚜 Farming Simulator 22
+*   **Repository:** [KFruti88/Farming-Simulator](https://github.com/KFruti88/Farming-Simulator)
 *   **Session Counter:** 0
 *   <details>
     <summary><strong>!contract</strong> (Contracts)</summary>
@@ -91,6 +92,17 @@ Here are the key projects and repositories I have worked on:
 *   **Current Count:** 0
 *   **Response:** Bronze harvests... what a waste of ammo. Just throw a rock next time. 🙄🔫
 </details>
+
+### 🏆 PlayStation Trophy Log
+
+> **User:** OneLIVIDMAN
+
+[![PSN Profile](https://img.shields.io/badge/PSN_Trophies-OneLIVIDMAN-003791?style=for-the-badge&logo=playstation&logoColor=white)](https://psntrophyleaders.com/user/view/OneLIVIDMAN)
+
+| Grade | Trophy | Game | Description |
+| :---: | :--- | :--- | :--- |
+| 💎 | **[Platinum Title]** | *[Game Name]* | *[Description]* |
+| 🥇 | **[Gold Title]** | *[Game Name]* | *[Description]* |
 
 ### 📈 GitHub Stats
 
