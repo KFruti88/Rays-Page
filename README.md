@@ -31,14 +31,66 @@ Here are the key projects and repositories I have worked on:
 
 #### 🚜 Farming Simulator 22
 *   **Session Counter:** 0
+*   <details>
+    <summary><strong>!contract</strong> (Contracts)</summary>
+
+    *   **Current Count:** 0
+    *   **Response:** number of contracts for farm simulator
+    </details>
 
 #### 🚜 Farming Simulator 25
 *   *(Coming Soon)*
 
 #### 🦌 The Hunter: Call of the Wild
-*   **Harvests:** 0
-*   **Diamonds:** 0
-*   **Rares:** 0
+
+<details>
+<summary><strong>!great</strong> (Great Ones)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Great Ones! Pack it up, boys. There’s nothing left to shoot but the breeze. 🌲👑
+</details>
+
+<details>
+<summary><strong>!diamond</strong> (Diamonds)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Diamonds! Finally, a trophy that doesn't look like it was found in a dumpster. 🦌💎
+</details>
+
+<details>
+<summary><strong>!myth</strong> (Mythical)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Mythical creatures down. Keep this up and Bigfoot is going to start getting nervous. 🏹✨
+</details>
+
+<details>
+<summary><strong>!legend</strong> (Legendary)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Legendary animals? At this point, the animals are starting to recognize you by name. 🏹🐾
+</details>
+
+<details>
+<summary><strong>!gold</strong> (Gold Medals)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Gold Medals. Not quite a Diamond, but at least it's enough to pay for the gas to get home. 🦌⛽
+</details>
+
+<details>
+<summary><strong>!silver</strong> (Silver Medals)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Silver medals. The "participation trophy" of the hunting world. Better luck next time. 🌲🙄
+</details>
+
+<details>
+<summary><strong>!bronze</strong> (Bronze Harvests)</summary>
+
+*   **Current Count:** 0
+*   **Response:** Bronze harvests... what a waste of ammo. Just throw a rock next time. 🙄🔫
+</details>
 
 ### 📈 GitHub Stats
 
