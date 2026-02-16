@@ -27,6 +27,19 @@ Here are the key projects and repositories I have worked on:
 
 *(Note: Please update the links above to point to your actual repositories.)*
 
+### 🎮 Game Stats & Counters
+
+#### 🚜 Farming Simulator 22
+*   **Session Counter:** 0
+
+#### 🚜 Farming Simulator 25
+*   *(Coming Soon)*
+
+#### 🦌 The Hunter: Call of the Wild
+*   **Harvests:** 0
+*   **Diamonds:** 0
+*   **Rares:** 0
+
 ### 📈 GitHub Stats
 
 ![Raymystro's GitHub stats](https://github-readme-stats.vercel.app/api?username=Raymystro&show_icons=true&theme=radical)
