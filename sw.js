@@ -1,9 +1,10 @@
-const CACHE_NAME = 'raymystro-cache-v1';
+const CACHE_NAME = 'raymystro-cache-v2';
 const ASSETS = [
     './',
     './index.html',
     './style.css',
     './script.js',
+    './profile.json',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
 ];
 

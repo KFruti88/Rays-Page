@@ -67,6 +67,16 @@ function updateCounter(key, change) {
 // Initial Load
 updateUI();
 
+// Load Profile Data from JSON
+fetch('./profile.json')
+    .then(response => response.json())
+    .then(data => {
+        if (data.operator) document.getElementById('profile-name').textContent = data.operator;
+        if (data.role) document.getElementById('profile-role').textContent = `${data.role} | ${data.specialty}`;
+        if (data.location) document.getElementById('profile-location').textContent = data.location;
+    })
+    .catch(err => console.error('Error loading profile:', err));
+
 // Register Service Worker for Smart Caching
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
