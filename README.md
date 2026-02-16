@@ -16,7 +16,8 @@ I'm a passionate developer building things under the name **Raymystro**.
 
 Here are the key projects and repositories I have worked on:
 
-*   **[Project Name 1]**: A brief description of what this project does.
+[![Farming-Simulator](https://github-readme-stats.vercel.app/api/pin/?username=KFruti88&repo=Farming-Simulator&theme=radical)](https://github.com/KFruti88/Farming-Simulator)
+
 *   **[Project Name 2]**: A brief description of what this project does.
 *   **[Project Name 3]**: A brief description of what this project does.
 
