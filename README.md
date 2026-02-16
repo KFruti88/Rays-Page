@@ -15,15 +15,7 @@ I'm a passionate developer building things under the name **Raymystro**.
 *   **Languages:** (e.g., Python, JavaScript, Java)
 *   **Frameworks:** (e.g., React, Node.js)
 *   **Tools:** (e.g., Git, Docker, VS Code)
-
-### 📂 Raymystro Repositories
-
-Here are the key projects and repositories I have worked on:
-
-[![Farming-Simulator](https://github-readme-stats.vercel.app/api/pin/?username=KFruti88&repo=Farming-Simulator&theme=radical)](https://github.com/KFruti88/Farming-Simulator)
-
-*   **[Project Name 2]**: A brief description of what this project does.
-*   **[Project Name 3]**: A brief description of what this project does.
+n of what this project does.
 
 *(Note: Please update the links above to point to your actual repositories.)*
 
@@ -89,6 +81,14 @@ Here are the key projects and repositories I have worked on:
 <details>
 <summary><strong>!bronze</strong> (Bronze Harvests)</summary>
 
+### 📂 Raymystro Repositories
+
+Here are the key projects and repositories I have worked on:
+
+[![Farming-Simulator](https://github-readme-stats.vercel.app/api/pin/?username=KFruti88&repo=Farming-Simulator&theme=radical)](https://github.com/KFruti88/Farming-Simulator)
+
+*   **[Project Name 2]**: A brief description of what this project does.
+*   **[Project Name 3]**: A brief descriptio
 *   **Current Count:** 0
 *   **Response:** Bronze harvests... what a waste of ammo. Just throw a rock next time. 🙄🔫
 </details>
