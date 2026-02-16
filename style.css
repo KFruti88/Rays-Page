@@ -1,0 +1,163 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1b26;
+    color: #a9b1d6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #24283b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1, h2, h3 {
+    color: #fff;
+}
+
+a {
+    color: #7aa2f7;
+    text-decoration: none;
+}
+
+/* Header */
+.profile-header {
+    text-align: center;
+    border-bottom: 2px solid #414868;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #7aa2f7;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #3d59a1;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Repo Card */
+.repo-card {
+    background: #16161e;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #7aa2f7;
+}
+
+/* Game Stats */
+.game-group {
+    background: #1f2335;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.command-box {
+    background: #292e42;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cmd-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #565f89;
+    color: white;
+    transition: 0.2s;
+}
+
+.cmd-btn:hover { transform: scale(1.05); }
+.cmd-btn:active { transform: scale(0.95); }
+
+/* Button Colors */
+.cmd-btn.mythic { background: linear-gradient(45deg, #ff00cc, #333399); }
+.cmd-btn.diamond { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+.cmd-btn.gold { background: linear-gradient(45deg, #f1c40f, #f39c12); }
+
+.response-text {
+    font-size: 0.9em;
+    margin-top: 8px;
+    font-style: italic;
+    color: #9aa5ce;
+    min-height: 40px; 
+}
+
+.mini-counter {
+    font-size: 0.8em;
+    color: #7aa2f7;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Session Counter */
+.counter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #16161e;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    background: #414868;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Trophy Table */
+.psn-badge {
+    display: inline-block;
+    background: #003791;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 55, 145, 0.5);
+}
+
+.trophy-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #16161e;
+}
+
+.trophy-table th, .trophy-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #414868;
+}
+
+.trophy-table th { background: #24283b; }
